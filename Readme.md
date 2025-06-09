@@ -4,8 +4,11 @@
 
 Una aplicación Android moderna construida con Kotlin que consume la API GraphQL de Rick and Morty para mostrar personajes con información detallada, funcionalidad de favoritos y soporte offline.
 
-![Demo App Inglés](https://github.com/andresarangoa/omnipro-rickandmorty/blob/main/assets/english_app.gif)
-![Demo App Español](https://github.com/andresarangoa/omnipro-rickandmorty/blob/main/assets/spanish_app.gif)
+<p align="center">
+  <img src="https://github.com/andresarangoa/omnipro-rickandmorty/blob/main/assets/english_app.gif" width="45%" />
+  <img src="https://github.com/andresarangoa/omnipro-rickandmorty/blob/main/assets/spanish_app.gif" width="45%" />
+</p>
+
 
 ## 🚀 Características
 
