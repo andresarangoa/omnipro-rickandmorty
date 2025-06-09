@@ -33,7 +33,7 @@ fun GetCharactersQuery.Result.toCharacter(): CharacterRickAndMorty {
             )
         },
         image = image ?: "",
-        episodes = episode?.mapNotNull { ep ->
+        episodes = episode.mapNotNull { ep ->
             ep?.let {
                 Episode(
                     id = it.id ?: "",
@@ -42,7 +42,8 @@ fun GetCharactersQuery.Result.toCharacter(): CharacterRickAndMorty {
                 )
             }
         } ?: emptyList(),
-        created = created ?: ""
+        created = created ?: "",
+        episodeCount = episode.size
     )
 }
 
@@ -71,7 +72,7 @@ fun GetCharacterQuery.Character.toCharacter(): CharacterRickAndMorty {
             )
         },
         image = image ?: "",
-        episodes = episode?.mapNotNull { ep ->
+        episodes = episode.mapNotNull { ep ->
             ep?.let {
                 Episode(
                     id = it.id ?: "",
@@ -80,8 +81,9 @@ fun GetCharacterQuery.Character.toCharacter(): CharacterRickAndMorty {
                     airDate = it.air_date
                 )
             }
-        } ?: emptyList(),
-        created = created ?: ""
+        },
+        created = created ?: "",
+        episodeCount = episode.size
     )
 }
 
@@ -100,6 +102,7 @@ fun CharacterEntity.toCharacter(): CharacterRickAndMorty {
             Location(locationId, locationName, locationType, locationDimension)
         } else null,
         image = image,
+        episodeCount = episodeCount,
         episodes = emptyList(), // Episodes loaded separately for detail view
         created = created,
         isFavorite = isFavorite

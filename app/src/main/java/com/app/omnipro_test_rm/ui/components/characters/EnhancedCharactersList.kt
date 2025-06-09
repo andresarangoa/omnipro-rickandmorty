@@ -10,7 +10,7 @@ import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.itemKey
 import com.app.omnipro_test_rm.domain.models.CharacterRickAndMorty
 import com.app.omnipro_test_rm.ui.components.DimensionErrorCard
-import com.app.omnipro_test_rm.ui.components.EnhancedCharacterCard
+import com.app.omnipro_test_rm.ui.components.enhanced.EnhancedCharacterCard
 import com.app.omnipro_test_rm.ui.components.PortalLoadingIndicator
 
 @Composable

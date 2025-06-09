@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Rick &amp; Morty</string>
+
+    <!-- Network Status Messages -->
+    <string name="network_connected">✅ Connected - Multiverse data updated</string>
+    <string name="network_losing">⚠️ Weak connection - Loading local data…</string>
+    <string name="network_lost">📱 No connection - Showing saved data</string>
+    <string name="network_unavailable">❌ No internet - Only local data available</string>
+
+    <!-- Content Descriptions -->
+    <string name="cd_wifi_icon">WiFi icon</string>
+    <string name="cd_wifi_off_icon">Disconnected WiFi icon</string>
+    <string name="cd_cloud_off_icon">Disconnected cloud icon</string>
+    <string name="cd_back_to_multiverse">Back to multiverse</string>
+    <string name="cd_add_to_favorites">Add to favorites</string>
+    <string name="cd_remove_from_favorites">Remove from favorites</string>
+    <string name="cd_refresh_portal">Refresh portal</string>
+    <string name="cd_info_icon">Information icon</string>
+    <string name="cd_location_icon">Location icon</string>
+    <string name="cd_tv_icon">TV icon</string>
+    <string name="cd_error_icon">Error icon</string>
+
+    <!-- Basic Information Card -->
+    <string name="basic_information">Basic Information</string>
+    <string name="label_gender">Gender</string>
+    <string name="label_episodes">Episodes</string>
+    <string name="label_dimension">Dimension</string>
+    <string name="label_type">Type</string>
+    <string name="standard_species">Standard %s</string>
+    <string name="unknown_dimension">Unknown</string>
+
+    <!-- Locations Card -->
+    <string name="dimensional_locations">Dimensional Locations</string>
+    <string name="origin_location">🏠 Origin</string>
+    <string name="current_location">📍 Current Location</string>
+    <string name="location_type_dimension">Type: %1$s • Dimension: %2$s</string>
+    <string name="location_type_only">Type: %s</string>
+    <string name="location_dimension_only">Dimension: %s</string>
+
+    <!-- Episodes Card -->
+    <string name="multiverse_adventures">Multiverse Adventures</string>
+    <string name="interdimensional_appearances">Interdimensional Appearances</string>
+
+    <!-- Error Messages -->
+    <string name="portal_error_title">Dimensional Portal Error!</string>
+    <string name="fix_portal">🔧 Fix Portal</string>
+    <string name="opening_portal">Opening portal…</string>
+    <string name="portal_malfunction">Portal malfunction detected!</string>
+    <string name="portal_connection_lost">Portal connection lost!</string>
+
+    <!-- Character Status -->
+    <string name="status_alive">Alive</string>
+    <string name="status_dead">Dead</string>
+    <string name="status_unknown">Unknown</string>
+
+    <!-- Loading States -->
+    <string name="loading_characters">Loading characters…</string>
+    <string name="loading_character_detail">Loading character details…</string>
+    <string name="remove_from_favorites">Remove from Favorites</string>
+    <string name="add_to_favorites">Add to Favorites</string>
+    <string name="app_tagline">🌌 Universe Explorer</string>
+    <string name="refresh">Refresh Portal</string>
+    <string name="all_characters">All Characters</string>
+    <string name="entities_discover">Entities Discovered</string>
+    <string name="favorites">Favorites</string>
+    <string name="characters">Characters</string>
+    <string name="episodes">Episodes</string>
+    <string name="locations">Locations</string>
+    <string name="character_profile">Character Profile</string>
+
+    <!-- PLURALS -->
+    <plurals name="episodes_appearances">
+        <item quantity="one">%d appearance</item>
+        <item quantity="other">%d appearances</item>
+    </plurals>
+
+    <plurals name="episodes_count">
+        <item quantity="one">%d Episode</item>
+        <item quantity="other">%d Episodes</item>
+    </plurals>
+
+    <plurals name="more_adventures">
+        <item quantity="one">🌌 … and %d more interdimensional adventure</item>
+        <item quantity="other">🌌 … and %d more interdimensional adventures</item>
+    </plurals>
+</resources>

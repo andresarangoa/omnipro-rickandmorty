@@ -36,6 +36,7 @@ kotlinx-coroutines = "1.10.2"
 apollo = "4.0.0-beta.7"
 koin = "3.5.6"
 koinCompose = "3.5.6"
+turbine = "1.0.0"
 
 [libraries]
 kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
@@ -128,6 +129,7 @@ apollo-cache = { group = "com.apollographql.apollo3", name = "apollo-normalized-
 koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
 koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koinCompose" }
 koin-test = { group = "io.insert-koin", name = "koin-test-junit4", version.ref = "koin" }
+turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

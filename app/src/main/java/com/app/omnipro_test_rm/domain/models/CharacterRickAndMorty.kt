@@ -11,6 +11,7 @@ data class CharacterRickAndMorty(
     val location: Location?,
     val image: String,
     val episodes: List<Episode>,
+    val episodeCount: Int,
     val created: String,
     val isFavorite: Boolean = false
 )

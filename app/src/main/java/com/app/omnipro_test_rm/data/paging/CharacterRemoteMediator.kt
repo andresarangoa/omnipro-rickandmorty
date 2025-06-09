@@ -14,9 +14,9 @@ class CharacterRemoteMediator(
     private val remoteDataSource: GraphQLDataSource,
     private val localDataSource: CharacterDao
 ) : RemoteMediator<Int, CharacterEntity>() {
-    
+
     private var currentPage = 1
-    
+
     override suspend fun load(
         loadType: LoadType,
         state: PagingState<Int, CharacterEntity>
@@ -27,19 +27,30 @@ class CharacterRemoteMediator(
                 LoadType.PREPEND -> return MediatorResult.Success(endOfPaginationReached = true)
                 LoadType.APPEND -> currentPage + 1
             }
-            
+
             val result = remoteDataSource.getCharacters(page)
-            
+
             result.fold(
                 onSuccess = { charactersPage ->
+                    val existingFavorites = if (loadType == LoadType.REFRESH) {
+                        localDataSource.getFavoriteCharacterIds()
+                    } else {
+                        emptyList()
+                    }
+
                     if (loadType == LoadType.REFRESH) {
                         localDataSource.clearAll()
                     }
-                    
-                    val entities = charactersPage.characterRickAndMorties.map { it.toEntity() }
+
+                    val entities = charactersPage.characterRickAndMorties.map { character ->
+                        character.toEntity().copy(
+                            isFavorite = existingFavorites.contains(character.id)
+                        )
+                    }
+
                     localDataSource.insertCharacters(entities)
                     currentPage = page
-                    
+
                     MediatorResult.Success(
                         endOfPaginationReached = !charactersPage.hasNextPage
                     )

@@ -1,4 +1,4 @@
-package com.app.omnipro_test_rm.ui.components
+package com.app.omnipro_test_rm.ui.components.enhanced
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
@@ -85,7 +85,7 @@ fun EnhancedStatsCard(
             
             Text(
                 text = title,
-                style = MaterialTheme.typography.labelMedium,
+                style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 fontWeight = FontWeight.Medium
             )

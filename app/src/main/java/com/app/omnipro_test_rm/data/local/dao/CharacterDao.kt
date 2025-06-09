@@ -18,6 +18,12 @@ interface CharacterDao {
     
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertCharacters(characters: List<CharacterEntity>)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertCharacter(character: CharacterEntity)
+
+    @Query("SELECT id FROM characters WHERE isFavorite = 1")
+    suspend fun getFavoriteCharacterIds(): List<String>
     
     @Update
     suspend fun updateCharacter(character: CharacterEntity)

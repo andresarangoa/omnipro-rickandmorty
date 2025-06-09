@@ -1,4 +1,4 @@
-package com.app.omnipro_test_rm.ui.components
+package com.app.omnipro_test_rm.ui.components.enhanced
 
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
@@ -25,6 +25,8 @@ import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.app.omnipro_test_rm.domain.models.CharacterRickAndMorty
 import com.app.omnipro_test_rm.domain.models.CharacterStatus
+import com.app.omnipro_test_rm.ui.components.StatusChip
+import com.app.omnipro_test_rm.ui.components.StatusIndicator
 import com.app.omnipro_test_rm.ui.theme.RickMortyColors
 
 @Composable

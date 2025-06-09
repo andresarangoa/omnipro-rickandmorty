@@ -1,3 +1,87 @@
 <resources>
-    <string name="app_name">omnipro-test-r&amp;m</string>
+    <string name="app_name">Rick &amp; Morty</string>
+
+    <!-- Network Status Messages -->
+    <string name="network_connected">✅ Conectado - Datos del multiverso actualizados</string>
+    <string name="network_losing">⚠️ Conexión débil - Cargando datos locales…</string>
+    <string name="network_lost">📱 Sin conexión - Mostrando datos guardados</string>
+    <string name="network_unavailable">❌ Sin internet - Solo datos locales disponibles</string>
+
+    <!-- Content Descriptions -->
+    <string name="cd_wifi_icon">Icono de WiFi</string>
+    <string name="cd_wifi_off_icon">Icono de WiFi desconectado</string>
+    <string name="cd_cloud_off_icon">Icono de nube desconectada</string>
+    <string name="cd_back_to_multiverse">Regresar al multiverso</string>
+    <string name="cd_add_to_favorites">Agregar a favoritos</string>
+    <string name="cd_remove_from_favorites">Quitar de favoritos</string>
+    <string name="cd_refresh_portal">Actualizar portal</string>
+    <string name="cd_info_icon">Icono de información</string>
+    <string name="cd_location_icon">Icono de ubicación</string>
+    <string name="cd_tv_icon">Icono de televisión</string>
+    <string name="cd_error_icon">Icono de error</string>
+
+    <!-- Basic Information Card -->
+    <string name="basic_information">Información Básica</string>
+    <string name="label_gender">Género</string>
+    <string name="label_episodes">Episodios</string>
+    <string name="label_dimension">Dimensión</string>
+    <string name="label_type">Tipo</string>
+    <string name="standard_species">%s estándar</string>
+    <string name="unknown_dimension">Desconocido</string>
+
+    <!-- Locations Card -->
+    <string name="dimensional_locations">Ubicaciones Dimensionales</string>
+    <string name="origin_location">🏠 Origen</string>
+    <string name="current_location">📍 Ubicación Actual</string>
+    <string name="location_type_dimension">Tipo: %1$s • Dimensión: %2$s</string>
+    <string name="location_type_only">Tipo: %s</string>
+    <string name="location_dimension_only">Dimensión: %s</string>
+
+    <!-- Episodes Card -->
+    <string name="multiverse_adventures">Aventuras del Multiverso</string>
+    <string name="interdimensional_appearances">Apariciones interdimensionales</string>
+
+    <!-- Error Messages -->
+    <string name="portal_error_title">¡Error del Portal Dimensional!</string>
+    <string name="fix_portal">🔧 Reparar Portal</string>
+    <string name="opening_portal">Abriendo portal…</string>
+    <string name="portal_malfunction">¡Mal funcionamiento del portal detectado!</string>
+    <string name="portal_connection_lost">¡Conexión del portal perdida!</string>
+
+    <!-- Character Status -->
+    <string name="status_alive">Vivo</string>
+    <string name="status_dead">Muerto</string>
+    <string name="status_unknown">Desconocido</string>
+
+    <!-- Loading States -->
+    <string name="loading_characters">Cargando personajes…</string>
+    <string name="loading_character_detail">Cargando detalles del personaje…</string>
+    <string name="remove_from_favorites">Remover de Favoritos</string>
+    <string name="add_to_favorites">Agregar a Favoritos</string>
+    <string name="app_tagline">🌌 Explorador del Universo</string>
+    <string name="refresh">Actualizar Portal</string>
+    <string name="all_characters">Todos los Personajes</string>
+    <string name="entities_discover">Entidades Descubiertas</string>
+    <string name="favorites">Favoritos</string>
+    <string name="characters">Characters</string>
+    <string name="episodes">Episodes</string>
+    <string name="locations">Locations</string>
+    <string name="character_profile">Perfil del Personaje</string>
+
+    <!-- PLURALS -->
+
+    <plurals name="episodes_appearances">
+        <item quantity="one">%d aparición</item>
+        <item quantity="other">%d apariciones</item>
+    </plurals>
+
+    <plurals name="episodes_count">
+        <item quantity="one">%d Episodio</item>
+        <item quantity="other">%d Episodios</item>
+    </plurals>
+
+    <plurals name="more_adventures">
+        <item quantity="one">🌌 … y %d aventura interdimensional más</item>
+        <item quantity="other">🌌 … y %d aventuras interdimensionales más</item>
+    </plurals>
 </resources>

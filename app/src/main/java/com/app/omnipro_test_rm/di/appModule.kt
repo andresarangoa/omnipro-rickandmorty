@@ -6,11 +6,14 @@ import com.apollographql.apollo3.cache.normalized.normalizedCache
 import com.apollographql.apollo3.cache.normalized.sql.SqlNormalizedCacheFactory
 import com.apollographql.apollo3.network.okHttpClient
 import com.app.omnipro_test_rm.data.local.database.AppDatabase
+import com.app.omnipro_test_rm.data.network.ConnectivityObserver
+import com.app.omnipro_test_rm.data.network.NetworkConnectivityObserver
 import com.app.omnipro_test_rm.data.remote.GraphQLDataSource
 import com.app.omnipro_test_rm.data.repository.CharacterRepository
 import com.app.omnipro_test_rm.domain.repository.ICharacterRepository
 import com.app.omnipro_test_rm.domain.usecases.GetCharacterDetailUseCase
 import com.app.omnipro_test_rm.domain.usecases.GetCharactersUseCase
+import com.app.omnipro_test_rm.domain.usecases.ObserveConnectivityUseCase
 import com.app.omnipro_test_rm.domain.usecases.ToggleFavoriteUseCase
 import com.app.omnipro_test_rm.ui.screens.characters.CharactersViewModel
 import com.app.omnipro_test_rm.ui.screens.detail.CharacterDetailViewModel
@@ -56,13 +59,15 @@ val appModule = module {
     
     // Repository
     single<ICharacterRepository> { CharacterRepository(get(), get()) }
-    
+    single<ConnectivityObserver> { NetworkConnectivityObserver(get()) }
+
     // Use Cases
     single { GetCharactersUseCase(get()) }
     single { GetCharacterDetailUseCase(get()) }
+    single { ObserveConnectivityUseCase(get()) }
     single { ToggleFavoriteUseCase(get()) }
     
     // ViewModels
-    viewModel { CharactersViewModel(get(), get()) }
-    viewModel { parameters -> CharacterDetailViewModel(parameters.get(), get(), get()) }
+    viewModel { CharactersViewModel(get(), get(), get()) }
+    viewModel { parameters -> CharacterDetailViewModel(parameters.get(), get(), get(), get()) }
 }

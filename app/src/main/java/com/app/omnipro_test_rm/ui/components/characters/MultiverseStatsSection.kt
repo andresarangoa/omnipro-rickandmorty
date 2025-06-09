@@ -5,12 +5,15 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.paging.compose.LazyPagingItems
+import com.app.omnipro_test_rm.R
 import com.app.omnipro_test_rm.domain.models.CharacterRickAndMorty
-import com.app.omnipro_test_rm.ui.components.EnhancedStatsCard
+import com.app.omnipro_test_rm.ui.components.enhanced.EnhancedStatsCard
 import com.app.omnipro_test_rm.ui.theme.RickMortyColors
+import java.util.Locale
 
 @Composable
 fun MultiverseStatsSection(characters: LazyPagingItems<CharacterRickAndMorty>) {
@@ -42,13 +45,13 @@ fun MultiverseStatsSection(characters: LazyPagingItems<CharacterRickAndMorty>) {
             ) {
                 Column {
                     Text(
-                        text = "All Characters",
+                        text = stringResource(id = R.string.all_characters),
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.onSurface
                     )
                     Text(
-                        text = "${loadedCharacters.size} entities discovered",
+                        text = "${loadedCharacters.size} ${stringResource(id = R.string.entities_discover)}",
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -68,7 +71,7 @@ fun MultiverseStatsSection(characters: LazyPagingItems<CharacterRickAndMorty>) {
                             style = MaterialTheme.typography.bodyMedium
                         )
                         Text(
-                            text = "Favorites ($favoriteCount)",
+                            text = "${stringResource(id = R.string.favorites)} ($favoriteCount)",
                             style = MaterialTheme.typography.bodyMedium,
                             color = RickMortyColors.DeadRed,
                             fontWeight = FontWeight.Medium
@@ -85,7 +88,7 @@ fun MultiverseStatsSection(characters: LazyPagingItems<CharacterRickAndMorty>) {
                 horizontalArrangement = Arrangement.spacedBy(12.dp)
             ) {
                 EnhancedStatsCard(
-                    title = "CHARACTERS",
+                    title = stringResource(id = R.string.characters).uppercase(Locale.getDefault()),
                     count = 826,
                     color = RickMortyColors.ScienceBlue,
                     icon = "👥",
@@ -93,7 +96,7 @@ fun MultiverseStatsSection(characters: LazyPagingItems<CharacterRickAndMorty>) {
                 )
                 
                 EnhancedStatsCard(
-                    title = "EPISODES",
+                    title = stringResource(id = R.string.episodes).uppercase(Locale.getDefault()),
                     count = 51,
                     color = RickMortyColors.PortalGreen,
                     icon = "📺",
@@ -101,7 +104,7 @@ fun MultiverseStatsSection(characters: LazyPagingItems<CharacterRickAndMorty>) {
                 )
                 
                 EnhancedStatsCard(
-                    title = "LOCATIONS",
+                    title = stringResource(id = R.string.locations).uppercase(Locale.getDefault()),
                     count = 126,
                     color = RickMortyColors.Accent,
                     icon = "🌍",

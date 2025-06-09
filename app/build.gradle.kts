@@ -4,7 +4,8 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.ksp)
-    alias(libs.plugins.apollo) // Apollo GraphQL plugin
+    alias(libs.plugins.apollo)
+    alias(libs.plugins.roborazzi)
 }
 
 android {
@@ -14,11 +15,16 @@ android {
     defaultConfig {
         applicationId = "com.app.omnipro_test_rm"
         minSdk = 24
-        targetSdk = 36
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    testOptions {
+        unitTests.isReturnDefaultValues = true
+        unitTests.isIncludeAndroidResources = true
     }
 
     buildTypes {
@@ -45,7 +51,6 @@ android {
 // Apollo GraphQL Configuration
 apollo {
     service("rickmorty") {
-        // Set the package name for generated classes
         packageName.set("com.app.omnipro_test_rm.graphql")
         generateQueryDocument.set(true)
 
@@ -54,26 +59,12 @@ apollo {
             endpointUrl.set("https://rickandmortyapi.com/graphql")
             schemaFile.set(file("src/main/graphql/schema.graphqls"))
         }
-
-        // Generate Kotlin models instead of Java
         generateKotlinModels.set(true)
-
-        // Use semantic naming for better readability
         useSemanticNaming.set(true)
-
-        // Generate fragments as separate classes
         generateFragmentImplementations.set(true)
-
-        // Optional: Generate operation output classes
         generateAsInternal.set(false)
-
-        // Optional: Configure code generation options
         codegenModels.set("operationBased") // or "responseBased"
-
-        // Optional: Flatten models (reduces nesting)
         flattenModels.set(true)
-
-        // Optional: Add custom type mappings
         mapScalarToUpload("Upload")
     }
 }
@@ -107,6 +98,14 @@ dependencies {
     testImplementation(libs.koin.test)
     testImplementation(libs.kotlinx.coroutines.test)
     testImplementation(libs.androidx.paging.testing)
+    testImplementation(libs.androidx.arch.testing)
+    testImplementation(libs.androidx.ui.test.junit4)
+    testImplementation(libs.koin.test)
+    testImplementation(libs.mockk.unit.test)
+    testImplementation(libs.robolectric)
+    testImplementation(libs.androidx.junit)
+    testImplementation(libs.bundles.roborazzi)
+    testImplementation(libs.turbine)
 
     // Annotation processors
     ksp(libs.room.compiler)
