@@ -284,7 +284,7 @@ Este proyecto está desarrollado como una evaluación técnica y es solo para pr
 
 **Andrés Arango**
 - GitHub: [@andresarangoa](https://github.com/andresarangoa)
-- LinkedIn: [Andrés Arango](https://linkedin.com/in/andresarangoa)
+- LinkedIn: [Andrés Arango](https://linkedin.com/in/andresarangoat)
 
 ## 🙏 Agradecimientos
 
